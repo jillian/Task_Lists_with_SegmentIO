@@ -1,0 +1,19 @@
+.row.clearfix
+  - if task.completed?
+    .complete
+      %i.fa.fa-check{:style => "opacity:0.4;"}
+    .task
+      %p
+        %strike= task.content
+    .trash
+      = link_to list_task_path(@list, task.id), method: :delete, data: { confirm: "Are you sure?" } do
+        %i.fa.fa-trash
+  - else
+    .complete
+      = link_to complete_list_task_path(@list, task.id), method: :patch do
+        %i.fa.fa-check
+    .task
+      %p{:style => "opacity: 0.4;"}= task.content
+    .trash
+      = link_to list_task_path(@list, task.id), method: :delete, data: { confirm: "Are you sure?" } do
+        %i.fa.fa-trash

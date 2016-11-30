@@ -1,0 +1,6 @@
+- @lists.each do |list|
+  .index_row.clearfix
+    %h2.list_title= link_to list.title, list
+    %p.list_sub_title= list.description
+.links
+  = link_to "New Task List", new_list_path

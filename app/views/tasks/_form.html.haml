@@ -1,0 +1,3 @@
+= form_for([@list, @list.tasks.build]) do |f|
+  = f.text_field :content, placeholder: "New Task"
+  = f.submit
