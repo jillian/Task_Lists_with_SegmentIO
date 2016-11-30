@@ -6,6 +6,8 @@
   #form
     = render "tasks/form"
 .links
-  = link_to 'Edit', edit_list_path(@list) |
-  = link_to 'Delete', list_path(@list), method: :delete, data: { confirm: "Are you sure?" } |
-  = link_to 'Back', lists_path}
+  = link_to 'Edit', edit_list_path(@list) 
+  |
+  = link_to 'Delete', list_path(@list), method: :delete, data: { confirm: "Are you sure?" } 
+  |
+  = link_to 'Back', lists_path
