@@ -1,0 +1,2 @@
+<p><%= task.content %></p>
+<%= link_to "Delete", list_task_path(@list, task.id), method: :delete, data: { confirm: "Are you sure?" } %>
