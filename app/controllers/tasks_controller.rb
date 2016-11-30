@@ -17,8 +17,8 @@ class TasksController < ApplicationController
   end
 
   def complete
-    @todo_item.update_attribute(:completed_at, Time.now)
-    redirect_to @todo_list, notice: "Task completed!"
+    @task.update_attribute(:completed_at, Time.now)
+    redirect_to @list, notice: "Task completed!"
   end
 
   private
