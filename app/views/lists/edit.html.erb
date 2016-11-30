@@ -1,6 +1,9 @@
-<h1>Editing List</h1>
+<h1 class="list_title">Edit Task List</h1>
 
-<%= render 'form', list: @list %>
+<div class="forms">
+  <%= render 'form', list: @list %>
+</div>
 
-<%= link_to 'Show', @list %> |
-<%= link_to 'Back', lists_path %>
+<div class="links">
+  <%= link_to 'Cancel', lists_path %>
+</div>

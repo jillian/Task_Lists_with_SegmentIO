@@ -1,14 +1,7 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @list.title %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @list.description %>
-</p>
+<h2 class="list_title"><%= @list.title %></h2>
+<p class=="list_sub_title"><%= @list.description%></p>
 
 <div id="tasks_wrapper">
   <%= render @list.tasks %>
@@ -17,5 +10,8 @@
   </div>
 </div>
 
-<%= link_to 'Edit', edit_list_path(@list) %> |
-<%= link_to 'Back', lists_path %>
+<div class="links">
+  <%= link_to 'Edit', edit_list_path(@list) %> |
+  <%= link_to 'Delete', list_path(@list), method: :delete, data: { confirm: "Are you sure?" } %> |
+  <%= link_to 'Back', lists_path %>
+</div>

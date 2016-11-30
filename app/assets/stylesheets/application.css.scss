@@ -51,6 +51,18 @@ body {
   font-weight: 100;
 }
 
+#notice {
+  text-align: center;
+  font-size: 0,6em;
+  color: $white_opaque;
+  font-weight: 100;
+  border: 1px solid $white_opaque;
+  padding: .5em 1em;
+  border-radius: 5px;
+  display: block;
+  margin: 1em 25%;
+}
+
 .container {
   width: 50%;
   max-width: 750px;
